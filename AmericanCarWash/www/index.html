@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>American Carwash Apps</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    
+    <link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.min.css">
+    <link rel="shortcut icon" href="img/icons/android/android%2072x72.png">
+    <script src="jqm/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="jqm/jquery.mobile-1.4.5.min.js"></script>
+    <!-- On debugging -->
+    <script src="http://debug-software.intel.com/target/target-script-min.js#OXXhn8WUZqIOoTJ8Ju2dL7t6KByYdYUK-xkQ6W8K6dU"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+<div data-role="page" id="main-page">
+    
+    <div role="main" class="ui-content">
+        <div class="main-login-form ui-corner-all">
+            <div class="text-center">
+                <img src="img/indologo.png">
+            </div>
+            <input data-clear-btn="true" name="login-username" data-wrapper-class="ui-login-input" id="login-username" value="" type="text" placeholder="Username">
+            <input data-clear-btn="true" name="login-password" data-wrapper-class="ui-login-input" class="login-input" id="login-password" value="" type="password" placeholder="Password">
+            <a class="ui-btn login-btn" href="#login-panel">LOGIN</a>
+            <p class="text-center">OR</p>
+            <a class="ui-btn signup-btn" href="#registration-page" data-transition="slide">CREATE AN ACCOUNT</a>
+        </div>
+    </div><!-- /content -->
+    
+    <div data-role="panel" id="signup-panel" data-position="right" data-display="overlay">
+        <h3>Pendaftaran</h3>
+        <button class="ui-shadow ui-btn ui-corner-all" id="register-button" data-icon="arrow-r">Daftarkan</button>
+    </div><!-- /panel -->
+</div><!-- /page -->
+
+<div data-role="page" id="registration-page">
+    
+    <div role="main" class="ui-content">
+        <div class="main-login-form ui-corner-all">
+            <div class="text-center">
+                <img src="img/indologo.png">
+            </div>
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-nama" value="" type="text" placeholder="Full Name">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-email" value="" type="email" placeholder="Email">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-username" value="" type="text" placeholder="Username">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-password" value="" type="password" placeholder="Password">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-passconf" value="" type="password" placeholder="Confirm Password">
+            <a class="ui-btn login-btn" href="#login-panel">SIGN UP</a>
+        </div>
+    </div><!-- /content -->
+    
+</div><!-- /page -->
+
+<div data-role="page" id="home-page">
+
+    <div data-role="header">
+        <h1>Car Wash</h1>
+        <a href="index.html" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <div class="home-header">
+        </div>
+        <div class="home-profile-picture">
+
+        </div>
+        <div class="home-body">
+
+        </div>
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <h4>&copy; 2015 American Carwash</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>

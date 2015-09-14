@@ -1,0 +1,95 @@
+/* Override */
+#main-page, #registration-page {
+	background-image: url("../img/login-background.jpg");
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-login-form {
+    background: rgba(0,0,0,0);
+    padding: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-login-input {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    background: none;
+    border-bottom: 1px solid white !important;
+    border-radius: 0;
+}
+
+.text-center {
+    text-align: center;
+    text-shadow: none;
+    color: #fff;
+}
+
+.ui-input-text, .ui-input-text input, .ui-page-theme-a .ui-focus {
+    padding: 10px 10px 10px 13px;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.ui-input-text input::-moz-placeholder, 
+.ui-input-search input::-moz-placeholder, 
+textarea.ui-input-text::-moz-placeholder
+{
+    color: #fff;
+    text-shadow: none;
+}
+
+.ui-input-text input::-webkit-input-placeholder,
+.ui-input-search input::-webkit-input-placeholder,
+textarea.ui-input-text::-webkit-input-placeholder
+{
+    color: #fff;
+    text-shadow: none;
+}
+
+.ui-input-text input:-moz-placeholder,
+.ui-input-search input:-moz-placeholder,
+textarea.ui-input-text:-moz-placeholder
+{
+    color: #fff;
+    text-shadow: none;
+}
+
+.ui-input-text input:-ms-input-placeholder,
+.ui-input-search input:-ms-input-placeholder,
+textarea.ui-input-text:-ms-input-placeholder
+{
+    color: #fff;
+    text-shadow: none;
+}
+
+.ui-page-theme-a .login-btn {
+    background: rgba(0,0,0,0);
+    color: #fff;
+    text-shadow: none;
+    font-weight: 500;
+    border: 1;
+    border-radius: 2em;
+    margin-top: 30px;
+}
+
+.ui-page-theme-a .ui-btn.signup-btn {
+    background: rgba(0,0,0,0);
+    color: #fff;
+    text-shadow: none;
+    font-weight: 500;
+    border: 1;
+    border-radius: 2em;
+}
+
+.ui-page-theme-a .ui-body-inherit {
+	background: none;
+	border: none; 
+}
+
+
+
