@@ -107,8 +107,19 @@ textarea.ui-input-text:-ms-input-placeholder
     background-position: center;
     display:block;
     color: #FFF; 
-    margin-bottom: 0px;
-    padding: 80px 20px 30px 30px;
+    padding: 80px 20px 20px 20px;
+}
+
+.ui-all-top-menu {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: none !important;
+    margin-top: 3px !important;
+}
+
+.home-body {
+    background: #eee;
 }
 
 .home-profile {
@@ -130,18 +141,76 @@ textarea.ui-input-text:-ms-input-placeholder
 .home-profile-name {
     float: left;
     text-align: left;
-    margin-top: -80px;
+    margin-top: -70px;
     margin-left: 120px;
+    text-shadow: none;
 }
 
 .home-profile-name-user {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .home-profile-name-address {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .home-profile-name-carnumber {
-    margin-top: 5px;
+    font-weight: bold;
 }
+
+.home-schedule-title {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    text-align: center;
+}
+
+.home-cs-image {
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+}
+
+.home-schedule-link {
+    padding-left: 5em !important;
+}
+
+.home-secondary-menu {
+    background: #72B363;
+    color: white;
+    text-shadow: none;
+    border: 1px solid #79BE69;
+    font-size: 14px;
+}
+
+.home-secondary-menu-item {
+    border: #79BE69 1px solid !important;
+    height: 20px;
+}
+
+.home-footer-menu {
+    height: 40px;
+    padding-top: 10px;
+}
+
+.home-footer-menu-item {
+    border-right: 1px solid #aaa;
+}
+
+.home-footer-menu-item_l {
+    border-right: 1px solid #aaa;
+}
+
+.hfmi-link, .hfmi-link:focus {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background: none !important;
+    border: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    height: 30px;
+}
+
+
+
+
