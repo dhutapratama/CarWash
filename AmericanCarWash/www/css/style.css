@@ -8,6 +8,14 @@
   background-position: center;
 }
 
+.app-header {
+    background: #52A33E !important;
+    border: none !important;
+    text-shadow: none !important;
+    color: #fff !important;
+}
+
+/* Login Page */
 .main-login-form {
     background: rgba(0,0,0,0);
     padding: 20px;
@@ -91,5 +99,49 @@ textarea.ui-input-text:-ms-input-placeholder
 	border: none; 
 }
 
+/* Home Page */
+.home-header {
+    background: url('../img/nabilah-car.jpg');
+    -webkit-background-size:cover !important;
+    background-size:cover !important;
+    background-position: center;
+    display:block;
+    color: #FFF; 
+    margin-bottom: 0px;
+    padding: 80px 20px 30px 30px;
+}
 
+.home-profile {
+    text-align: center;
+}
 
+.home-profile-picture {
+    background: url('../img/profpict_160x160.png');
+    -webkit-background-size:cover !important;
+    background-size:cover !important;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    color: #FFF;
+    border-radius: 1em;
+    border: 5px solid #fff;
+}
+
+.home-profile-name {
+    float: left;
+    text-align: left;
+    margin-top: -80px;
+    margin-left: 120px;
+}
+
+.home-profile-name-user {
+    font-size: 25px;
+}
+
+.home-profile-name-address {
+    font-size: 12px;
+}
+
+.home-profile-name-carnumber {
+    margin-top: 5px;
+}

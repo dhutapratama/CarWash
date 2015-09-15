@@ -24,7 +24,7 @@ function onAppReady() {
     $.mobile.loader.prototype.options.html          = "";
 }
 document.addEventListener("app.Ready", onAppReady, false) ;
-document.addEventListener("backbutton", onAppBackButton, false)
+document.addEventListener("backbutton", onAppBackButton, false);
 //document.addEventListener("resume", onResume, false);
 //document.addEventListener("menubutton", onMenuKeyDown, false);
 //document.addEventListener("online", online, false);
@@ -37,7 +37,6 @@ document.addEventListener("intel.xdk.camera.picture.cancel",onSuccess);
 // document.addEventListener("onload", onAppReady, false) ;
 
 function onAppBackButton() {
-    alert("Back Button");
 }
 function onResume() {
 }
