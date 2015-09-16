@@ -22,6 +22,9 @@ function onAppReady() {
     $.mobile.loader.prototype.options.textVisible   = false;
     $.mobile.loader.prototype.options.theme         = "b";
     $.mobile.loader.prototype.options.html          = "";
+    $(function() {
+        $( "body>[data-role='panel']" ).panel().enhanceWithin();
+    });
 }
 document.addEventListener("app.Ready", onAppReady, false) ;
 //document.addEventListener("backbutton", onAppBackButton, false);

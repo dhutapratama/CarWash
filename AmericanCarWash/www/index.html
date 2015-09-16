@@ -30,15 +30,15 @@
 <body>
     
 <div data-role="page" id="main-page">
-    <div role="main" class="ui-content">
+    <div role="main" class="ui-content main-login">
         <div class="main-login-form ui-corner-all">
-            <div class="text-center">
-                <img src="img/indologo.png">
+            <div class="text-center main-form-logo">
+                <img src="img/acw-logo.png">
             </div>
             <input data-clear-btn="true" name="login-username" data-wrapper-class="ui-login-input" id="login-username" value="" type="text" placeholder="Username">
             <input data-clear-btn="true" name="login-password" data-wrapper-class="ui-login-input" class="login-input" id="login-password" value="" type="password" placeholder="Password">
             <a class="ui-btn login-btn" href="#home-page">LOGIN</a>
-            <p class="text-center">OR</p>
+            <p class="text-center login-or">OR</p>
             <a class="ui-btn signup-btn" href="#registration-page" data-transition="slide">CREATE AN ACCOUNT</a>
         </div>
     </div><!-- /content -->
@@ -47,23 +47,40 @@
 <div data-role="page" id="registration-page">
     <div role="main" class="ui-content">
         <div class="main-login-form ui-corner-all">
-            <div class="text-center">
-                <img src="img/indologo.png">
+            <div class="text-center main-form-logo">
+                <img src="img/acw-logo.png">
             </div>
-            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-nama" value="" type="text" placeholder="Full Name">
-            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-email" value="" type="email" placeholder="Email">
-            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-username" value="" type="text" placeholder="Username">
-            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-password" value="" type="password" placeholder="Password">
-            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-passconf" value="" type="password" placeholder="Confirm Password">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-nama" value="" type="text" placeholder="Full Name*">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-email" value="" type="email" placeholder="Email*">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-username" value="" type="text" placeholder="Username*">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-password" value="" type="password" placeholder="Password*">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-passconf" value="" type="password" placeholder="Confirm Password*">
+
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-passconf" value="" type="text" placeholder="Referal Code">
             <a class="ui-btn login-btn" href="#login-panel">SIGN UP</a>
         </div>
     </div><!-- /content -->
 </div><!-- /page -->
 
+
+<div data-role="panel" id="all-menu" data-position="left" data-display="overlay" data-theme="a" class="panel-menu">
+    <div class="panel-menu-header">
+        <div class="overlayer"></div>
+        <img src="img/acw-logo.png" width="90px">
+    </div>
+
+    <ul data-role="listview">
+        <li data-icon="false">Referal code :</li>
+        <li data-icon="gear"><a href="#" data-transition="slide" class="panel-menu-item">Profile</a></li>
+        <li data-icon="false"><a href="#" data-transition="slide" class="panel-menu-item">Something</a></li>
+        <li data-icon="power"><a href="#main-page" data-transition="slide" class="panel-menu-item">Logout</a></li>
+    </ul>
+</div><!-- /leftpanel3 -->
+
 <div data-role="page" id="home-page">
     <div data-role="header" class="app-header">
         <h1>Car Wash</h1>
-        <a href="index.html" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right ui-all-top-menu ui-btn-corner-all">Menu</a>
+        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right ui-all-top-menu ui-btn-corner-all">Menu</a>
     </div><!-- /header -->
 
     <div class="home-header">
@@ -90,8 +107,9 @@
                 <ul data-role="listview" data-inset="true">
                     <li><a href="#" class="home-schedule-link">
                         <img src="img/pembersih.jpg" class="home-cs-image">
-                    <h2>10 September 2015 10:15</h2>
-                    <p>Apartemen Menteng, Lt. 5, BH 13</p></a>
+                    <h2 class="home-schedule-date">10 September 2015 10:15</h2>
+                    <p class="home-schedule-address">Apartemen Menteng, Lt. 5, BH 13</p>
+                    <p class="home-schedule-carnumber">B 48 JKT</p></a>
                     </li>
                 </ul>
             </div>
@@ -102,11 +120,15 @@
                 <ul data-role="listview" data-inset="true">
                     <li><a href="#" class="home-schedule-link">
                         <img src="img/pembersih.jpg" class="home-cs-image">
-                    <h2>10 September 2015 10:15</h2>
-                    <p>Apartemen Menteng, Lt. 5, BH 13</p></a>
+                    <h2 class="home-schedule-date">10 September 2015 10:15</h2>
+                    <p class="home-schedule-address">Apartemen Menteng, Lt. 5, BH 13</p>
+                    <p class="home-schedule-carnumber">B 48 JKT</p></a>
                     </li>
                 </ul>
             </div>
+        </div>
+        <div>
+
         </div>
     </div><!-- /content -->
 

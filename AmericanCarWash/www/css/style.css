@@ -1,11 +1,11 @@
 /* Override */
 #main-page, #registration-page {
-	background-image: url("../img/login-background.jpg");
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center;
+    background-image: url("../img/login-background.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
 }
 
 .app-header {
@@ -15,13 +15,24 @@
     color: #fff !important;
 }
 
+.ui-page-theme-a {
+    background-color: #eee;
+}
+
 /* Login Page */
+.main-login {
+    padding-top: 30px;
+}
+
 .main-login-form {
     background: rgba(0,0,0,0);
-    padding: 20px;
-    max-width: 600px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.main-form-logo {
+    margin-bottom: 30px !important;
 }
 
 .ui-login-input {
@@ -29,6 +40,8 @@
     background: none;
     border-bottom: 1px solid white !important;
     border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text-center {
@@ -37,8 +50,13 @@
     color: #fff;
 }
 
+.login-or {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .ui-input-text, .ui-input-text input, .ui-page-theme-a .ui-focus {
-    padding: 10px 10px 10px 13px;
+    padding: 0px 10px 3px 13px;
     box-shadow: none;
     text-shadow: none;
 }
@@ -49,6 +67,7 @@ textarea.ui-input-text::-moz-placeholder
 {
     color: #fff;
     text-shadow: none;
+    text-align: center;
 }
 
 .ui-input-text input::-webkit-input-placeholder,
@@ -57,6 +76,7 @@ textarea.ui-input-text::-webkit-input-placeholder
 {
     color: #fff;
     text-shadow: none;
+    text-align: center;
 }
 
 .ui-input-text input:-moz-placeholder,
@@ -65,6 +85,7 @@ textarea.ui-input-text:-moz-placeholder
 {
     color: #fff;
     text-shadow: none;
+    text-align: center;
 }
 
 .ui-input-text input:-ms-input-placeholder,
@@ -73,30 +94,58 @@ textarea.ui-input-text:-ms-input-placeholder
 {
     color: #fff;
     text-shadow: none;
+    text-align: center;
 }
 
-.ui-page-theme-a .login-btn {
-    background: rgba(0,0,0,0);
-    color: #fff;
-    text-shadow: none;
-    font-weight: 500;
-    border: 1;
-    border-radius: 2em;
-    margin-top: 30px;
+.login-btn {
+    background: rgba(82,163,62, .7) !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    font-weight: 500 !important;
+    border-radius: none;
+    margin-top: 20px;
+    padding: 5px !important;
 }
 
-.ui-page-theme-a .ui-btn.signup-btn {
-    background: rgba(0,0,0,0);
-    color: #fff;
-    text-shadow: none;
-    font-weight: 500;
-    border: 1;
-    border-radius: 2em;
+.signup-btn {
+    background: rgba(0,0,0,0) !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    font-weight: 500 !important;
+    padding: 5px !important;
 }
 
 .ui-page-theme-a .ui-body-inherit {
 	background: none;
 	border: none; 
+}
+
+/* Menu Panel */
+.panel-menu {
+    background: #333333; color: #fff!important;
+}
+
+.panel-menu-header {
+    background-color: #fff;
+    width: 252px;
+    height: 120px;
+    margin: -15px 15px 15px -16px;
+    background-image: url("../img/login-background.jpg");
+	  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+.panel-menu-item {
+    background: none !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    border: none !important;
+    font-weight: 400 !important;
 }
 
 /* Home Page */
@@ -107,7 +156,7 @@ textarea.ui-input-text:-ms-input-placeholder
     background-position: center;
     display:block;
     color: #FFF; 
-    padding: 80px 20px 20px 20px;
+    padding: 90px 20px 20px 20px;
 }
 
 .ui-all-top-menu {
@@ -163,6 +212,24 @@ textarea.ui-input-text:-ms-input-placeholder
     font-weight: bold;
     margin-bottom: -10px;
     text-align: center;
+    color: #676767;
+}
+
+.home-schedule-carnumber {
+    margin-bottom: 0px !important;
+    font-weight: bold !important;
+    margin-top: 0px !important;
+}
+
+.home-schedule-date {
+    margin-top: 3px !important;
+    margin-bottom: 0px !important;
+}
+
+.home-schedule-address {
+    color: #767676;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
 }
 
 .home-cs-image {
@@ -209,8 +276,19 @@ textarea.ui-input-text:-ms-input-placeholder
     text-shadow: none !important;
     box-shadow: none !important;
     height: 30px;
+    width: 30px;
+    padding: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 }
 
 
-
+.overlayer {
+    background: rgba(82, 163, 62, .4) !important;
+    height: 173px;
+    width: 271px;
+    margin-top: -50px;
+    margin-left: -19px;
+    margin-bottom: -130px;
+}
 
