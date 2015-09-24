@@ -12,7 +12,12 @@
     background: #52A33E !important;
     border: none !important;
     text-shadow: none !important;
+    
+}
+
+.app-header-title {
     color: #fff !important;
+    text-decoration: none;
 }
 
 .ui-page-theme-a {
@@ -21,7 +26,7 @@
 
 /* Login Page */
 .main-login {
-    padding-top: 30px;
+    padding-top: 40px;
 }
 
 .main-login-form {
@@ -32,11 +37,11 @@
 }
 
 .main-form-logo {
-    margin-bottom: 30px !important;
+    margin-bottom: 20px !important;
 }
 
 .ui-login-input {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: unset;
     background: none;
     border-bottom: 1px solid white !important;
     border-radius: 0;
@@ -128,16 +133,16 @@ textarea.ui-input-text:-ms-input-placeholder
 .panel-menu-header {
     background-color: #fff;
     width: 252px;
-    height: 120px;
-    margin: -15px 15px 15px -16px;
+    height: 100px;
     background-image: url("../img/login-background.jpg");
 	  -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-position: center;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-left: 20px;
+    margin: -15px 0px 23px -16px;
 }
 
 .panel-menu-item {
@@ -145,8 +150,59 @@ textarea.ui-input-text:-ms-input-placeholder
     color: #fff !important;
     text-shadow: none !important;
     border: none !important;
-    font-weight: 400 !important;
+    font-size: 12px;
+    letter-spacing: 1px;
+    
 }
+
+.overlayer {
+    background: rgba(82, 163, 62, .4) !important;
+    height: 140px;
+    width: 273px;
+    margin-top: -40px;
+    margin-left: -21px;
+    margin-bottom: -115px;
+}
+
+.panel-profile-picture {
+    background: url('../img/profpict_160x160.png');
+    -webkit-background-size:cover !important;
+    background-size:cover !important;
+    background-position: center;
+    height: 80px;
+    width: 80px;
+    color: #FFF;
+    border-radius: 1em;
+    border: 4px solid #fff;
+}
+
+.panel-referal {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.panel-referal-label {
+    text-shadow: none;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: -50px;
+    margin-left: 100px;
+}
+
+.panel-referal-code {
+    text-shadow: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 100px;
+}
+
+.panel-referal-email {
+    font-weight: unset;
+    font-size: 12px;
+    margin-top: 13px;
+    text-shadow: none;
+}
+
 
 /* Home Page */
 .home-header {
@@ -159,20 +215,33 @@ textarea.ui-input-text:-ms-input-placeholder
     padding: 90px 20px 20px 20px;
 }
 
-.ui-all-top-menu {
+.app-header-h1 {
+    text-align: left!important;
+    margin-left: 10px !important;
+    margin-right: 35px !important;
+}
+
+.app-header-h2 {
+    text-align: left!important;
+    margin-left: 35px !important;
+    margin-right: 35px !important;
+}
+
+.all-top-menu {
     background: none !important;
     border: none !important;
     box-shadow: none !important;
     border-radius: none !important;
-    margin-top: 3px !important;
+    margin-top: 2px !important;
 }
 
-.home-body {
-    background: #eee;
+.all-header-backbtn::after {
+    background-color: transparent !important;
 }
 
-.home-profile {
+.home-profile, .home-profile:hover, .home-profile:focus {
     text-align: center;
+    color: #fff !important;
 }
 
 .home-profile-picture {
@@ -215,6 +284,11 @@ textarea.ui-input-text:-ms-input-placeholder
     color: #676767;
 }
 
+.hst-link {
+    color: #676767 !important;
+    text-decoration: none;
+}
+
 .home-schedule-carnumber {
     margin-bottom: 0px !important;
     font-weight: bold !important;
@@ -251,10 +325,19 @@ textarea.ui-input-text:-ms-input-placeholder
 }
 
 .home-secondary-menu-item {
-    border: #79BE69 1px solid !important;
+    border-left: #A0E090 1px solid !important;
     height: 20px;
+    color: #fff !important;
+    text-decoration: none;
 }
 
+.home-secondary-menu-item:hover {
+    background: #52A33E;
+}
+
+.home-secondary-menu-item:focus {
+    background: #52A33E;
+}
 .home-footer-menu {
     height: 40px;
     padding-top: 10px;
@@ -282,13 +365,266 @@ textarea.ui-input-text:-ms-input-placeholder
     padding-right: 10px !important;
 }
 
-
-.overlayer {
-    background: rgba(82, 163, 62, .4) !important;
-    height: 173px;
-    width: 271px;
-    margin-top: -50px;
-    margin-left: -19px;
-    margin-bottom: -130px;
+/* My Car */
+.mycars-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #676767;
+    border-bottom: #52A33E 3px solid;
+    padding-bottom: 3px;
 }
 
+.mycars-link {
+    color: #676767 !important;
+    text-decoration: none;
+    padding: 0px !important;
+    text-shadow: none !important;
+    color: #ddd !important;
+}
+
+.mycars-image {
+    background-image: url("../img/mycar/my-smallcar.jpg");
+	  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    padding-top: 140px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.mycars-image2 {
+    background-image: url("../img/mycar/my-bigcar.jpg");
+	  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    padding-top: 140px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.mycars-carnumber {
+    margin-bottom: 0px !important;
+    font-weight: bold !important;
+    margin-top: 2px !important;
+}
+
+.mycars-date {
+    margin-bottom: 0px !important;
+}
+
+.mycars-address {
+    color: #eee;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+/* Membership */
+.deposit-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #676767;
+    border-bottom: #52A33E 3px solid;
+    padding-bottom: 3px;
+}
+
+.deposit-link {
+    color: #676767 !important;
+    text-decoration: none;
+    padding: 0px !important;
+    margin-bottom: 0px !important;
+    border: none !important;
+    text-shadow: none !important;
+    color: #ddd !important;
+    text-align: center !important;
+}
+
+.deposit-unlisted {
+    max-width: 500px;
+}
+
+.deposit-list {
+    margin-bottom: -0px !important;
+}
+
+.deposit-image {
+	  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: -5px;
+}
+
+.deposit-image-item {
+    width: 100%;
+    max-width: 500px;
+}
+
+.deposit-link::after {
+    background: none;
+}
+
+.deposit-date {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* My Car */
+.cd-date {
+    background: #ebebeb;
+}
+
+.cd-title-logo, .cd-title-logo:focus {
+    background: none !important;
+    box-shadow: none !important;
+    margin: 0;
+    height: 1em;
+    width: 1em;
+    border-style: none;
+}
+
+.cd-title-logo::after {
+    color: #aaa;
+    background-color: transparent !important;
+}
+
+.cd-title-text {
+    font-size: 13px;
+    text-shadow: none;
+    font-weight: bold;
+    margin-top: -13px;
+    margin-left: 22px;
+    margin-bottom: 7px;
+}
+
+.cd-date-time {
+    text-shadow: none;
+}
+
+.cddt-time {
+    font-weight: bold;
+    font-size: 37px;
+    line-height: 25px;
+    float: left;
+    margin-right: 5px;
+}
+
+.cddt-date {
+    float: left;
+}
+
+.cddt-date-date {
+    font-size: 12px;
+    line-height: 7px;
+}
+
+.cddt-date-year {
+    font-size: 17.5px;
+}
+
+.cd-status {
+    float: right;
+    font-weight: bold;
+    color: #52A33E;
+    text-shadow: none;
+}
+
+.cd-status2 {
+    float: right;
+    font-weight: bold;
+    color: #ff4433;
+    text-shadow: none;
+}
+
+.cd-text {
+    background: #D9D9D9;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.cd-subtext {
+    font-weight: initial;
+    font-size: 10px;
+}
+
+.cd-images {
+    background: #e3e3e3;
+    padding-bottom: 20px
+}
+
+.cdi-list {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.cdi-list > li {
+    list-style: none;
+    display: inline;
+}
+
+/* News Feed */
+.link-feed {
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+.feed {
+    background: #fff;
+    padding: 10px;
+}
+
+.feed-profile-image {
+    background: url('../img/acw-logo.png');
+    -webkit-background-size:cover !important;
+    background-size:cover !important;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    float: left;
+}
+
+.feed-image-item {
+    width: 100%;
+}
+
+.feed-profile-id {
+    padding-left: 50px;
+    height: 40px;
+}
+
+.feed-profile-name {
+    font-size: 14px;
+}
+
+.feed-profile-time {
+    font-size: 12px;
+}
+
+.feed-news {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.feed-link {
+    font-size: 10px;
+    background: #eee;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #52A33E;
+    text-shadow: none;
+    color: #ECEFF6;
+}
+
+/* Map Page */
+.map {
+    height: calc(100% - 75px);
+}

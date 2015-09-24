@@ -12,17 +12,17 @@
         @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
     </style>
 
-    <script src="cordova.js"></script>
-    <script src="js/app.js"></script>
-    <script src="xdk/init-dev.js"></script>
-    
     <link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.min.css">
     <link rel="shortcut icon" href="img/icons/android/android%2072x72.png">
+
+    <script src="cordova.js"></script>
+    <script src="xdk/init-dev.js"></script>
     <script src="jqm/jquery.min.js"></script>
-    <script src="js/app.js"></script>
     <script src="jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/app.js"></script>
     <!-- On debugging -->
     <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#OXXhn8WUZqIOoTJ8Ju2dL7t6KByYdYUK-xkQ6W8K6dU"></script> -->
+    <script src="js/maps.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,9 +31,9 @@
     
 <div data-role="page" id="main-page">
     <div role="main" class="ui-content main-login">
-        <div class="main-login-form ui-corner-all">
+        <div class="main-login-form">
             <div class="text-center main-form-logo">
-                <img src="img/acw-logo.png">
+                <img src="img/acw-logo.png" width="130px">
             </div>
             <input data-clear-btn="true" name="login-username" data-wrapper-class="ui-login-input" id="login-username" value="" type="text" placeholder="Username">
             <input data-clear-btn="true" name="login-password" data-wrapper-class="ui-login-input" class="login-input" id="login-password" value="" type="password" placeholder="Password">
@@ -45,10 +45,10 @@
 </div><!-- /page -->
 
 <div data-role="page" id="registration-page">
-    <div role="main" class="ui-content">
-        <div class="main-login-form ui-corner-all">
+    <div role="main" class="ui-content main-login">
+        <div class="main-login-form ">
             <div class="text-center main-form-logo">
-                <img src="img/acw-logo.png">
+                <img src="img/acw-logo.png" width="130px">
             </div>
             <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-nama" value="" type="text" placeholder="Full Name*">
             <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="daftar-email" value="" type="email" placeholder="Email*">
@@ -62,29 +62,32 @@
     </div><!-- /content -->
 </div><!-- /page -->
 
-
 <div data-role="panel" id="all-menu" data-position="left" data-display="overlay" data-theme="a" class="panel-menu">
     <div class="panel-menu-header">
         <div class="overlayer"></div>
-        <img src="img/acw-logo.png" width="90px">
+        <div class="panel-profile-picture"></div>
+        <a href="#" class="panel-referal">
+            <div class="panel-referal-label">Referal code :</div>
+            <div class="panel-referal-code">00000</div>
+        </a>
+        <div class="panel-referal-email">nabila_jkt48@gmail.com</div>
     </div>
 
     <ul data-role="listview">
-        <li data-icon="false">Referal code :</li>
-        <li data-icon="gear"><a href="#" data-transition="slide" class="panel-menu-item">Profile</a></li>
-        <li data-icon="false"><a href="#" data-transition="slide" class="panel-menu-item">Something</a></li>
-        <li data-icon="power"><a href="#main-page" data-transition="slide" class="panel-menu-item">Logout</a></li>
+        <li data-icon="plus"><a href="#" data-transition="slide" class="panel-menu-item">EDIT CARS</a></li>
+        <li data-icon="gear"><a href="#" data-transition="slide" class="panel-menu-item">SETTING</a></li>
+        <li data-icon="power"><a href="#main-page" data-transition="slide" class="panel-menu-item">LOGOUT</a></li>
     </ul>
 </div><!-- /leftpanel3 -->
 
 <div data-role="page" id="home-page">
     <div data-role="header" class="app-header">
-        <h1>Car Wash</h1>
-        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right ui-all-top-menu ui-btn-corner-all">Menu</a>
+        <h1 class="app-header-h1"><a href="#" class="app-header-title">American Carwash</a></h1>
+        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
     </div><!-- /header -->
 
     <div class="home-header">
-        <div class="home-profile">
+        <a class="home-profile" href="#">
             <div class="home-profile-picture">
             </div>
             <div class="home-profile-name">
@@ -92,20 +95,20 @@
                 <div class="home-profile-name-address">Apartemen Menteng Square, Tower A</div>
                 <div class="home-profile-name-carnumber">B 48 JKT</div>
             </div>
-        </div>
+        </a>
     </div>
 
     <div class="ui-grid-a home-secondary-menu text-center">
-        <div class="ui-block-a"><div class="ui-bar home-secondary-menu-item">My Car</div></div>
-        <div class="ui-block-b"><div class="ui-bar home-secondary-menu-item">Deposit</div></div>
+        <div class="ui-block-a"><a class="ui-bar home-secondary-menu-item" href="#mycar-page" data-transition="slide">My Car</a></div>
+        <div class="ui-block-b"><a class="ui-bar home-secondary-menu-item" href="#deposit-page" data-transition="slide">Deposit</a></div>
     </div><!-- /grid-a -->
 
-    <div role="main" class="ui-content home-body">
+    <div role="main" class="ui-content">
         <div class="home-schedule">
-            <div class="home-schedule-title">LAST CLEANING</div>
+            <div class="home-schedule-title"><a href="#" class="hst-link">LAST CLEANING</a></div>
             <div class="home-schedule-data">
                 <ul data-role="listview" data-inset="true">
-                    <li><a href="#" class="home-schedule-link">
+                    <li><a href="#cleaning_detail-page" data-transition="slide" class="home-schedule-link">
                         <img src="img/pembersih.jpg" class="home-cs-image">
                     <h2 class="home-schedule-date">10 September 2015 10:15</h2>
                     <p class="home-schedule-address">Apartemen Menteng, Lt. 5, BH 13</p>
@@ -115,12 +118,12 @@
             </div>
         </div>
         <div class="home-schedule">
-            <div class="home-schedule-title">NEXT CLEANING</div>
+            <div class="home-schedule-title"><a href="#" class="hst-link">NEXT CLEANING</a></div>
             <div class="home-schedule-data">
                 <ul data-role="listview" data-inset="true">
-                    <li><a href="#" class="home-schedule-link">
-                        <img src="img/pembersih.jpg" class="home-cs-image">
-                    <h2 class="home-schedule-date">10 September 2015 10:15</h2>
+                    <li><a href="#cleaning_detail2-page" data-transition="slide" class="home-schedule-link">
+                        <img src="img/acw-logo.png" class="home-cs-image">
+                    <h2 class="home-schedule-date">13 September 2015 10:15</h2>
                     <p class="home-schedule-address">Apartemen Menteng, Lt. 5, BH 13</p>
                     <p class="home-schedule-carnumber">B 48 JKT</p></a>
                     </li>
@@ -135,14 +138,282 @@
     <div data-role="footer" data-position="fixed">
         <div data-role="navbar" class="home-footer-menu">
             <ul>
-                <li class="home-footer-menu-item_l"><a href="#" class="ui-btn ui-icon-calendar ui-btn-icon-notext hfmi-link">Menu item 1</a></li>
-                <li class="home-footer-menu-item"><a href="#" class="ui-btn ui-icon-clock ui-btn-icon-notext hfmi-link">Menu item 1</a></li>
-                <li class="home-footer-menu-item"><a href="#" class="ui-btn ui-icon-info ui-btn-icon-notext hfmi-link">Menu item 1</a></li>
-                <li class="home-footer-menu-item"><a href="#" class="ui-btn ui-icon-location ui-btn-icon-notext hfmi-link">Menu item 1</a></li>
-                <li><a href="#" class="ui-btn ui-icon-phone ui-btn-icon-notext hfmi-link">Menu item 1</a></li>
+                <li class="home-footer-menu-item_l"><a href="#news_feed-page" class="ui-btn ui-icon-comment ui-btn-icon-notext hfmi-link">News Feed</a></li>
+                <li class="home-footer-menu-item"><a href="#" class="ui-btn ui-icon-info ui-btn-icon-notext hfmi-link">Contact Us</a></li>
+                <li class="home-footer-menu-item"><a href="#map-page" class="ui-btn ui-icon-location ui-btn-icon-notext hfmi-link">Maps</a></li>
+                <li><a href="#" class="ui-btn ui-icon-phone ui-btn-icon-notext hfmi-link">Call Us</a></li>
             </ul>
         </div>
     </div><!-- /footer -->
 </div><!-- /page -->
+
+<div data-role="page" id="mycar-page">
+    <div data-role="header" class="app-header">
+        <a href="#" data-rel="back" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
+        <h2 class="app-header-h2"><a href="#" class="app-header-title">American Carwash</a></h2>
+        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <div class="home-schedule">
+            <div class="mycars-title"><a href="#" class="hst-link">MY CARS</a></div>
+            <ul data-role="listview" data-inset="true">
+
+                <li>
+                    <a href="#" class="mycars-link">
+                        <div class="mycars-image">
+                            <h2 class="mycars-date">B 48 JKT</h2>
+                            <p class="mycars-address">Subscribed</p>
+                            <p class="mycars-carnumber">Exp : 20-05-2015</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="mycars-link">
+                        <div class="mycars-image2">
+                            <h2 class="mycars-date">B 3215 KLM</h2>
+                            <p class="mycars-address">Subscribed</p>
+                            <p class="mycars-carnumber">Exp : 20-05-2015</p>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" class="home-footer-menu">
+            <ul>
+                <li class="home-footer-menu-item_l"><a href="#news_feed-page" class="ui-btn ui-icon-comment ui-btn-icon-notext hfmi-link">News Feed</a></li>
+                <li class="home-footer-menu-item"><a href="#" class="ui-btn ui-icon-info ui-btn-icon-notext hfmi-link">Contact Us</a></li>
+                <li class="home-footer-menu-item"><a href="#map-page" class="ui-btn ui-icon-location ui-btn-icon-notext hfmi-link">Maps</a></li>
+                <li><a href="#" class="ui-btn ui-icon-phone ui-btn-icon-notext hfmi-link">Call Us</a></li>
+            </ul>
+        </div>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="deposit-page">
+    <div data-role="header" class="app-header">
+        <a href="#" data-rel="back" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
+        <h2 class="app-header-h2"><a href="#" class="app-header-title">American Carwash</a></h2>
+        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <div class="home-schedule">
+            <div class="deposit-title"><a href="#" class="hst-link">DEPOSIT</a></div>
+            <ul data-role="listview" data-inset="true" class="deposit-unlisted">
+
+                <li class="deposit-list">
+                    <a href="#" class="deposit-link">
+                        <div class="deposit-image">
+                            <img src="img/subscribe/small-car.jpg" class="deposit-image-item">
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+            <ul data-role="listview" data-inset="true" class="deposit-unlisted">
+
+                <li class="deposit-list">
+                    <a href="#" class="deposit-link">
+                        <div class="deposit-image">
+                            <img src="img/subscribe/big-car.jpg" class="deposit-image-item">
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" class="home-footer-menu">
+            <ul>
+                <li class="home-footer-menu-item_l"><a href="#news_feed-page" class="ui-btn ui-icon-comment ui-btn-icon-notext hfmi-link">News Feed</a></li>
+                <li class="home-footer-menu-item"><a href="#" class="ui-btn ui-icon-info ui-btn-icon-notext hfmi-link">Contact Us</a></li>
+                <li class="home-footer-menu-item"><a href="#map-page" class="ui-btn ui-icon-location ui-btn-icon-notext hfmi-link">Maps</a></li>
+                <li><a href="#" class="ui-btn ui-icon-phone ui-btn-icon-notext hfmi-link">Call Us</a></li>
+            </ul>
+        </div>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="cleaning_detail-page">
+    <div data-role="header" class="app-header">
+        <a href="#" data-rel="back" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
+        <h2 class="app-header-h2"><a href="#" class="app-header-title">Cleaning Report</a></h2>
+        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
+    </div><!-- /header -->
+
+    <div class="cd-date">
+        <div role="main" class="ui-content">
+            <div class="cd-title ui-alt-icon">
+                <a href="#" class="ui-btn ui-icon-calendar ui-btn-icon-notext cd-title-logo ui-btn-inline"></a>
+                <div class="cd-title-text">Date</div>
+            </div>
+            <div class="cd-date-time">
+                <div class="cddt-time">
+                    10:15
+                </div>
+                <div class="cddt-date">
+                    <div class="cddt-date-date">
+                    10 OKT
+                    </div>
+                    <div class="cddt-date-year">
+                        2015
+                    </div>
+                </div>
+            </div>
+            <div class="cd-status">
+                Done
+            </div>
+        </div><!-- /content -->
+    </div>
+
+    <div class="cd-text">
+        BEFORE
+        <div class="cd-subtext">Apartemen Menteng | Basement BA - 13</div>
+    </div>
+
+    <div class="cd-images">
+        <ul class="cdi-list">
+            <li><img src="img/brio/brio-beside.jpg" width="49%"></li>
+            <li><img src="img/brio/brio-beside2.jpg" width="49%"></li>
+            <li><img src="img/brio/brio-back.jpg" width="49%"></li>
+            <li><img src="img/brio/brio-front.jpg" width="49%"></li>
+        </ul>
+    </div>
+
+    <div class="cd-text cd-after">
+        AFTER
+        <div class="cd-subtext">Apartemen Menteng | Basement BA - 13</div>
+    </div>
+
+    <div class="cd-images">
+        <ul class="cdi-list">
+            <li><img src="img/brio/brio-front.jpg" width="49%"></li>
+            <li><img src="img/brio/brio-beside.jpg" width="49%"></li>
+            <li><img src="img/brio/brio-beside2.jpg" width="49%"></li>
+            <li><img src="img/brio/brio-back.jpg" width="49%"></li>
+        </ul>
+    </div>
+</div><!-- /page -->
+
+<div data-role="page" id="cleaning_detail2-page">
+    <div data-role="header" class="app-header">
+        <a href="#" data-rel="back" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
+        <h2 class="app-header-h2"><a href="#" class="app-header-title">Cleaning Report</a></h2>
+        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
+    </div><!-- /header -->
+
+    <div class="cd-date">
+        <div role="main" class="ui-content">
+            <div class="cd-title ui-alt-icon">
+                <a href="#" class="ui-btn ui-icon-calendar ui-btn-icon-notext cd-title-logo ui-btn-inline"></a>
+                <div class="cd-title-text">Date</div>
+            </div>
+            <div class="cd-date-time">
+                <div class="cddt-time">
+                    10:15
+                </div>
+                <div class="cddt-date">
+                    <div class="cddt-date-date">
+                    10 OKT
+                    </div>
+                    <div class="cddt-date-year">
+                        2015
+                    </div>
+                </div>
+            </div>
+            <div class="cd-status2">
+                Waiting Schedule
+            </div>
+        </div><!-- /content -->
+    </div>
+
+    <div class="cd-text">
+        BEFORE
+        <div class="cd-subtext">Apartemen Menteng | Basement BA - 13</div>
+    </div>
+
+    <div class="cd-images">
+        <ul class="cdi-list">
+            <li><br />Not Available</li>
+        </ul>
+    </div>
+
+    <div class="cd-text cd-after">
+        AFTER
+        <div class="cd-subtext">Apartemen Menteng | Basement BA - 13</div>
+    </div>
+
+    <div class="cd-images">
+        <ul class="cdi-list">
+            <li><br />Not Available</li>
+        </ul>
+    </div>
+</div><!-- /page -->
+
+<div data-role="page" id="news_feed-page">
+
+    <div data-role="header" class="app-header">
+        <a href="#" data-rel="back" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
+        <h2 class="app-header-h2"><a href="#" class="app-header-title">News Feed</a></h2>
+        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <a href="#" class="link-feed">
+            <div class="feed">
+                <div class="feed-profile">
+                    <div class="feed-profile-image"></div>
+                    <div class="feed-profile-id">
+                        <div class="feed-profile-name">American Carwash</div>
+                        <div class="feed-profile-time">10 Hours Ago</div>
+                    </div>
+                </div>
+                <div class="feed-news">American Carwash has achieved cleaning 1.000.000 cars in first month.</div>
+                <div class="feed-image">
+                    <img src="img/news/wash.jpg" class="feed-image-item">
+                </div>
+            </div>
+            <div class="feed-link">http://americanecocarwash.com/achievement</div>
+        </a>
+
+        <a href="#" class="link-feed">
+            <div class="feed">
+                <div class="feed-profile">
+                    <div class="feed-profile-image"></div>
+                    <div class="feed-profile-id">
+                        <div class="feed-profile-name">American Carwash</div>
+                        <div class="feed-profile-time">10 Hours Ago</div>
+                    </div>
+                </div>
+                <div class="feed-news">Launching "The First Inovative Car Washing", American Eco Car Wash get 100.000 new members.</div>
+                <div class="feed-image">
+                    <img src="img/news/employee.jpg" class="feed-image-item">
+                </div>
+            </div>
+            <div class="feed-link">http://americanecocarwash.com/achievement</div>
+        </a>
+    </div><!-- /content -->
+</div><!-- /page -->
+
+<div data-role="page" id="map-page" class="map">
+
+    <div data-role="header" class="app-header">
+        <a href="#" data-rel="back" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
+        <h2 class="app-header-h2"><a href="#" class="app-header-title">Our Locations</a></h2>
+        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content map" id="map-canvas">
+    </div><!-- /content -->
+</div><!-- /page -->
+
 </body>
 </html>

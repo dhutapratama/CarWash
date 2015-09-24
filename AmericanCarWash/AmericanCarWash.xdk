@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww32/jsapp/templates-blank-cordova-project-lite/sample.zip",
       "projectGuid": "ec7bc4c9-16ea-43aa-abe3-51702b180647",
-      "lastModifiedDate": 1441860217133,
+      "lastModifiedDate": 1443073518844,
       "creationDate": 1441678718431
     },
     "XDK-app-designer": "false",
@@ -104,6 +104,20 @@
         "paramvals": {},
         "dependsOn": [],
         "dependedBy": []
+      },
+      {
+        "id": "com.mbppower.camerapreview",
+        "version": "",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": [],
+        "custom": "true",
+        "name": "camerapreview",
+        "origin": "com.mbppower.camerapreview",
+        "originType": "cordova.io",
+        "sourceLocation": ""
       }
     ],
     "buildConfigurations": {
@@ -114,7 +128,8 @@
         "preferences_": {
           "android-minSdkVersion": "14",
           "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-installLocation": "auto",
+          "Fullscreen": true
         },
         "isActive_": true,
         "appName_": "American Carwash",
@@ -364,7 +379,7 @@
         "preferences_": {
           "windows-publisher-display-name": "",
           "windows-publisher-id": "",
-          "Fullscreen": true
+          "Fullscreen": false
         },
         "isActive_": true,
         "appName_": "American Carwash",
@@ -390,7 +405,7 @@
         "runtime_": "W3C",
         "name_": "WebApp",
         "preferences_": {},
-        "isActive_": false,
+        "isActive_": true,
         "appName_": "AmericanCarWash",
         "appID_": "not.yet.specified",
         "appAccess_": [
@@ -411,7 +426,7 @@
         "runtime_": "W3C on Chrome OS",
         "name_": "Chrome",
         "preferences_": {},
-        "isActive_": false,
+        "isActive_": true,
         "appName_": "AmericanCarWash",
         "appID_": "not.yet.specified",
         "appAccess_": [
