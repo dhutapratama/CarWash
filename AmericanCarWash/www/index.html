@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
-<!--
-  * Please see the included README.md file for license terms and conditions.
-  -->
 <head>
-    <title>American Carwash Apps</title>
+    <title>American Eco Carwash</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <style>
@@ -13,24 +10,55 @@
     </style>
 
     <link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.min.css">
-    <link rel="shortcut icon" href="img/icons/android/android%2072x72.png">
 
     <script src="cordova.js"></script>
-    <script src="xdk/init-dev.js"></script>
     <script src="jqm/jquery.min.js"></script>
     <script src="jqm/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/app.js"></script>
-    <!-- On debugging -->
-    <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#OXXhn8WUZqIOoTJ8Ju2dL7t6KByYdYUK-xkQ6W8K6dU"></script> -->
-    <script src="js/maps.js"></script>
+    <script src="xdk/init-dev.js"></script>
 
+    <link rel="stylesheet" href="js/slider/css/glide.core.min.css">
+    <link rel="stylesheet" href="js/slider/css/glide.theme.min.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
 
+    <script src="js/slider/glide.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+</head>
 <body>
-    
-<div data-role="page" id="main-page">
-    <div role="main" class="ui-content main-login">
+
+<div data-role="page" id="main-page" class="main-page">
+    <div id="glide" class="glide">
+        <div class="glide__wrapper">
+            <ul class="glide__track">
+                <li class="glide__slide" style="width:100%">
+                    <a href="#" class="box"><img src="img/slider/slide1.jpg" style="width: 100%;"></a>
+                </li>
+                <li class="glide__slide" style="width:100%">
+                    <a href="#" class="box"><img src="img/slider/slide2.jpg" style="width: 100%;"></a>
+                </li>
+            </ul>
+        </div>
+        <ul class="glide__bullets"></ul>
+    </div>
+
+    <div role="main" class="ui-content main-page">
+        <div class="ui-grid-c main-page-menu">
+            <div class="ui-block-a"><a href="#info-page" data-transition="slide"><img src="img/icons/home-menu/info.png" width="80%"></a></div>
+            <div class="ui-block-b"><a href="#deposit-page" data-transition="slide"><img src="img/icons/home-menu/price.png" width="80%"></a></div>
+            <div class="ui-block-c"><a href="#map-page" data-transition="slide"><img src="img/icons/home-menu/location.png" width="80%"></a></div>
+            <div class="ui-block-d"><a href="#news_feed-page" data-transition="slide"><img src="img/icons/home-menu/news.png" width="80%"></a></div>
+        </div><!-- /grid-c -->
+
+        <div class="main-sign">
+            <a class="ui-btn main-login-btn" href="#login-page" data-transition="slide">LOGIN</a>
+            <p class="text-center main-login-or">OR</p>
+            <a class="ui-btn main-signup-btn" href="#registration-page" data-transition="slide">CREATE AN ACCOUNT</a>
+        </div>
+    </div><!-- /content -->
+</div><!-- /page -->
+
+<div data-role="page" id="login-page" style="min-height: 100% !important;" class="login-page">
+    <div role="main" class="ui-content main-login" style="height: 100% !important;">
         <div class="main-login-form">
             <div class="text-center main-form-logo">
                 <img src="img/acw-logo.png" width="130px">
@@ -62,23 +90,109 @@
     </div><!-- /content -->
 </div><!-- /page -->
 
-<div data-role="panel" id="all-menu" data-position="left" data-display="overlay" data-theme="a" class="panel-menu">
-    <div class="panel-menu-header">
-        <div class="overlayer"></div>
-        <div class="panel-profile-picture"></div>
-        <a href="#" class="panel-referal">
-            <div class="panel-referal-label">Referal code :</div>
-            <div class="panel-referal-code">00000</div>
-        </a>
-        <div class="panel-referal-email">nabila_jkt48@gmail.com</div>
-    </div>
+<div data-role="page" id="news_feed-page">
 
-    <ul data-role="listview">
-        <li data-icon="plus"><a href="#" data-transition="slide" class="panel-menu-item">EDIT CARS</a></li>
-        <li data-icon="gear"><a href="#" data-transition="slide" class="panel-menu-item">SETTING</a></li>
-        <li data-icon="power"><a href="#main-page" data-transition="slide" class="panel-menu-item">LOGOUT</a></li>
-    </ul>
-</div><!-- /leftpanel3 -->
+    <div data-role="header" class="app-header">
+        <a href="#main-page" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
+        <h2 class="app-header-h2"><a href="#" class="app-header-title">News Feed</a></h2>
+        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <a href="#" class="link-feed">
+            <div class="feed">
+                <div class="feed-profile">
+                    <div class="feed-profile-image"></div>
+                    <div class="feed-profile-id">
+                        <div class="feed-profile-name">American Carwash</div>
+                        <div class="feed-profile-time">10 Hours Ago</div>
+                    </div>
+                </div>
+                <div class="feed-news">American Carwash has achieved cleaning 1.000.000 cars in first month.</div>
+                <div class="feed-image">
+                    <img src="img/news/wash.jpg" class="feed-image-item">
+                </div>
+            </div>
+            <div class="feed-link">http://americanecocarwash.com/achievement</div>
+        </a>
+
+        <a href="#" class="link-feed">
+            <div class="feed">
+                <div class="feed-profile">
+                    <div class="feed-profile-image"></div>
+                    <div class="feed-profile-id">
+                        <div class="feed-profile-name">American Carwash</div>
+                        <div class="feed-profile-time">10 Hours Ago</div>
+                    </div>
+                </div>
+                <div class="feed-news">Launching "The First Inovative Car Washing", American Eco Car Wash get 100.000 new members.</div>
+                <div class="feed-image">
+                    <img src="img/news/employee.jpg" class="feed-image-item">
+                </div>
+            </div>
+            <div class="feed-link">http://americanecocarwash.com/achievement</div>
+        </a>
+    </div><!-- /content -->
+</div><!-- /page -->
+
+<div data-role="page" id="info-page">
+
+    <div data-role="header" class="app-header">
+        <a href="#main-page" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
+        <h2 class="app-header-h2"><a href="#" class="app-header-title">News Feed</a></h2>
+        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <a href="https://www.youtube.com/watch?v=q9bDLTTHId0" class="link-feed">
+            <div class="feed">
+                <div class="feed-profile">
+                    <div class="feed-profile-image"></div>
+                    <div class="feed-profile-id">
+                        <div class="feed-profile-name">American Carwash</div>
+                        <div class="feed-profile-time">10 Hours Ago</div>
+                    </div>
+                </div>
+                <div class="feed-news">American Carwash has achieved cleaning 1.000.000 cars in first month.</div>
+                <div class="feed-image">
+                    <img src="http://img.youtube.com/vi/q9bDLTTHId0/0.jpg" class="feed-image-item">
+                </div>
+            </div>
+            <div class="feed-link">https://www.youtube.com/watch?v=q9bDLTTHId0</div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=q9bDLTTHId0" class="link-feed">
+            <div class="feed">
+                <div class="feed-profile">
+                    <div class="feed-profile-image"></div>
+                    <div class="feed-profile-id">
+                        <div class="feed-profile-name">American Carwash</div>
+                        <div class="feed-profile-time">10 Hours Ago</div>
+                    </div>
+                </div>
+                <div class="feed-news">Launching "The First Inovative Car Washing", American Eco Car Wash get 100.000 new members.</div>
+                <div class="feed-image">
+                    <img src="http://img.youtube.com/vi/q9bDLTTHId0/0.jpg" class="feed-image-item">
+                </div>
+            </div>
+            <div class="feed-link">https://www.youtube.com/watch?v=q9bDLTTHId0</div>
+        </a>
+    </div><!-- /content -->
+</div><!-- /page -->
+
+<div data-role="page" id="map-page" class="map">
+    <div data-role="header" class="app-header">
+        <a href="#main-page" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
+        <h2 class="app-header-h2"><a href="#" class="app-header-title">Our Locations</a></h2>
+        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content map" id="map-canvas">
+    </div><!-- /content -->
+</div><!-- /page -->
+
+
+
 
 <div data-role="page" id="home-page">
     <div data-role="header" class="app-header">
@@ -130,21 +244,7 @@
                 </ul>
             </div>
         </div>
-        <div>
-
-        </div>
     </div><!-- /content -->
-
-    <div data-role="footer" data-position="fixed">
-        <div data-role="navbar" class="home-footer-menu">
-            <ul>
-                <li class="home-footer-menu-item_l"><a href="#news_feed-page" class="ui-btn ui-icon-comment ui-btn-icon-notext hfmi-link">News Feed</a></li>
-                <li class="home-footer-menu-item"><a href="#" class="ui-btn ui-icon-info ui-btn-icon-notext hfmi-link">Contact Us</a></li>
-                <li class="home-footer-menu-item"><a href="#map-page" class="ui-btn ui-icon-location ui-btn-icon-notext hfmi-link">Maps</a></li>
-                <li><a href="#" class="ui-btn ui-icon-phone ui-btn-icon-notext hfmi-link">Call Us</a></li>
-            </ul>
-        </div>
-    </div><!-- /footer -->
 </div><!-- /page -->
 
 <div data-role="page" id="mycar-page">
@@ -358,62 +458,26 @@
     </div>
 </div><!-- /page -->
 
-<div data-role="page" id="news_feed-page">
+<div data-role="panel" id="all-menu" data-position="left" data-display="overlay" data-theme="a"  class="panel-menu">
 
-    <div data-role="header" class="app-header">
-        <a href="#" data-rel="back" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
-        <h2 class="app-header-h2"><a href="#" class="app-header-title">News Feed</a></h2>
-        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
-    </div><!-- /header -->
-
-    <div role="main" class="ui-content">
-        <a href="#" class="link-feed">
-            <div class="feed">
-                <div class="feed-profile">
-                    <div class="feed-profile-image"></div>
-                    <div class="feed-profile-id">
-                        <div class="feed-profile-name">American Carwash</div>
-                        <div class="feed-profile-time">10 Hours Ago</div>
-                    </div>
-                </div>
-                <div class="feed-news">American Carwash has achieved cleaning 1.000.000 cars in first month.</div>
-                <div class="feed-image">
-                    <img src="img/news/wash.jpg" class="feed-image-item">
-                </div>
-            </div>
-            <div class="feed-link">http://americanecocarwash.com/achievement</div>
+    <div class="panel-menu-header">
+        <div class="overlayer"></div>
+        <div class="panel-profile-picture"></div>
+        <a href="#" class="panel-referal">
+            <div class="panel-referal-label">Referal code :</div>
+            <div class="panel-referal-code">65461</div>
         </a>
+        <div class="panel-referal-email">nabila_jkt48@gmail.com</div>
+    </div>
 
-        <a href="#" class="link-feed">
-            <div class="feed">
-                <div class="feed-profile">
-                    <div class="feed-profile-image"></div>
-                    <div class="feed-profile-id">
-                        <div class="feed-profile-name">American Carwash</div>
-                        <div class="feed-profile-time">10 Hours Ago</div>
-                    </div>
-                </div>
-                <div class="feed-news">Launching "The First Inovative Car Washing", American Eco Car Wash get 100.000 new members.</div>
-                <div class="feed-image">
-                    <img src="img/news/employee.jpg" class="feed-image-item">
-                </div>
-            </div>
-            <div class="feed-link">http://americanecocarwash.com/achievement</div>
-        </a>
-    </div><!-- /content -->
-</div><!-- /page -->
+    <ul data-role="listview">
+        <li data-icon="plus"><a href="#" data-transition="slide" class="panel-menu-item">EDIT CARS</a></li>
+        <li data-icon="gear"><a href="#" data-transition="slide" class="panel-menu-item">SETTING</a></li>
+        <li data-icon="power"><a href="#main-page" data-transition="slide" class="panel-menu-item">LOGOUT</a></li>
+    </ul>
+</div><!-- /panelmenu -->
 
-<div data-role="page" id="map-page" class="map">
 
-    <div data-role="header" class="app-header">
-        <a href="#" data-rel="back" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
-        <h2 class="app-header-h2"><a href="#" class="app-header-title">Our Locations</a></h2>
-        <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
-    </div><!-- /header -->
-
-    <div role="main" class="ui-content map" id="map-canvas">
-    </div><!-- /content -->
-</div><!-- /page -->
 
 </body>
 </html>

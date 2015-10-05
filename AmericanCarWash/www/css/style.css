@@ -1,18 +1,9 @@
 /* Override */
-#main-page, #registration-page {
-    background-image: url("../img/login-background.jpg");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
-}
 
 .app-header {
     background: #52A33E !important;
     border: none !important;
     text-shadow: none !important;
-    
 }
 
 .app-header-title {
@@ -20,8 +11,61 @@
     text-decoration: none;
 }
 
-.ui-page-theme-a {
+.ui-mobile .ui-page {
     background-color: #eee;
+    min-height: 100%;
+}
+
+/* Main page */
+.glide__track {
+    padding: 0px;
+    margin: 0px;
+}
+
+.glide__bullets {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.main-page-menu {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.box {
+	color: #fff;
+	font-size: 3vw;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-login-btn {
+    background: #33cc33 !important;
+    color: #eee !important;
+    text-shadow: none !important;
+    border-radius: 2em;
+    margin-top: 20px;
+    padding: 10px !important;
+}
+
+.main-login-or {
+    color: #333 !important;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-signup-btn {
+    background: rgba(0,0,0,0) !important;
+    color: #33cc33 !important;
+    text-shadow: none !important;
+    font-weight: 500 !important;
+    padding: 10px !important;
+    border: 3px solid #33cc33 !important;
+    border-radius: 2em;
 }
 
 /* Login Page */
@@ -43,7 +87,7 @@
 .ui-login-input {
     box-shadow: unset;
     background: none;
-    border-bottom: 1px solid white !important;
+    border-bottom: 1px solid #33cc33 !important;
     border-radius: 0;
     margin-left: auto;
     margin-right: auto;
@@ -58,6 +102,7 @@
 .login-or {
     margin-top: 10px;
     margin-bottom: 10px;
+    color: #33cc33;
 }
 
 .ui-input-text, .ui-input-text input, .ui-page-theme-a .ui-focus {
@@ -70,7 +115,7 @@
 .ui-input-search input::-moz-placeholder, 
 textarea.ui-input-text::-moz-placeholder
 {
-    color: #fff;
+    color: #33cc33;
     text-shadow: none;
     text-align: center;
 }
@@ -79,7 +124,7 @@ textarea.ui-input-text::-moz-placeholder
 .ui-input-search input::-webkit-input-placeholder,
 textarea.ui-input-text::-webkit-input-placeholder
 {
-    color: #fff;
+    color: #33cc33;
     text-shadow: none;
     text-align: center;
 }
@@ -88,7 +133,7 @@ textarea.ui-input-text::-webkit-input-placeholder
 .ui-input-search input:-moz-placeholder,
 textarea.ui-input-text:-moz-placeholder
 {
-    color: #fff;
+    color: #33cc33;
     text-shadow: none;
     text-align: center;
 }
@@ -97,27 +142,26 @@ textarea.ui-input-text:-moz-placeholder
 .ui-input-search input:-ms-input-placeholder,
 textarea.ui-input-text:-ms-input-placeholder
 {
-    color: #fff;
+    color: #33cc33;
     text-shadow: none;
     text-align: center;
 }
 
 .login-btn {
-    background: rgba(82,163,62, .7) !important;
+    background: #33cc33 !important;
     color: #fff !important;
     text-shadow: none !important;
-    font-weight: 500 !important;
-    border-radius: none;
+    border-radius: 2em;
     margin-top: 20px;
-    padding: 5px !important;
+    padding: 10px !important;
 }
 
 .signup-btn {
-    background: rgba(0,0,0,0) !important;
-    color: #fff !important;
+    color: #33cc33 !important;
     text-shadow: none !important;
-    font-weight: 500 !important;
-    padding: 5px !important;
+    padding: 10px !important;
+    border-radius: 2em;
+    border: 3px solid #33cc33 !important;
 }
 
 .ui-page-theme-a .ui-body-inherit {
