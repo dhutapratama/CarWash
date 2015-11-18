@@ -17,21 +17,39 @@
 }
 
 /* Main page */
-.glide__track {
-    padding: 0px;
-    margin: 0px;
+.flickity-page-dots {
+  bottom: -20px;
 }
 
-.glide__bullets {
-    margin: 0;
-    padding: 0;
-    position: absolute;
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 20px;
+  margin: 0;
+  border-radius: 0;
+}
+
+.gallery img {
+  width: 100%;
+    min-height: 300px;
+}
+
+.flickity-prev-next-button {
+  display: none;
+}
+
+.flickity-viewport {
+    min-height: 300px;
 }
 
 .main-page-menu {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 35px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.img-slider {
+    width: 100%;
 }
 
 .box {
@@ -40,6 +58,7 @@
 	display: flex;
     align-items: center;
     justify-content: center;
+    width: 100% !important;
 }
 
 .main-login-btn {
@@ -109,6 +128,7 @@
     padding: 0px 10px 3px 13px;
     box-shadow: none;
     text-shadow: none;
+    text-align: center;
 }
 
 .ui-input-text input::-moz-placeholder, 
@@ -179,7 +199,7 @@ textarea.ui-input-text:-ms-input-placeholder
     width: 252px;
     height: 100px;
     background-image: url("../img/login-background.jpg");
-	  -webkit-background-size: cover;
+	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
@@ -209,7 +229,7 @@ textarea.ui-input-text:-ms-input-placeholder
 }
 
 .panel-profile-picture {
-    background: url('../img/profpict_160x160.png');
+    background: url('../img/profile_picture_default.png');
     -webkit-background-size:cover !important;
     background-size:cover !important;
     background-position: center;
@@ -250,7 +270,6 @@ textarea.ui-input-text:-ms-input-placeholder
 
 /* Home Page */
 .home-header {
-    background: url('../img/nabilah-car.jpg');
     -webkit-background-size:cover !important;
     background-size:cover !important;
     background-position: center;
@@ -289,7 +308,7 @@ textarea.ui-input-text:-ms-input-placeholder
 }
 
 .home-profile-picture {
-    background: url('../img/profpict_160x160.png');
+    background: url('../img/profile_picture_default.png');
     -webkit-background-size:cover !important;
     background-size:cover !important;
     background-position: center;
@@ -382,6 +401,48 @@ textarea.ui-input-text:-ms-input-placeholder
 .home-secondary-menu-item:focus {
     background: #52A33E;
 }
+
+
+
+.home-secondary-menu_1 {
+    background: #72B363;
+    color: white;
+    text-shadow: none;
+    border: 1px solid #79BE69;
+    font-size: 14px;
+}
+
+.home-secondary-menu-item_1 {
+    border-right: #A0E090 1px solid !important;
+    height: 20px;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.home-secondary-menu-item_1:hover {
+    background: #52A33E;
+}
+
+.home-secondary-menu-item_1:focus {
+    background: #52A33E;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .home-footer-menu {
     height: 40px;
     padding-top: 10px;
@@ -427,20 +488,7 @@ textarea.ui-input-text:-ms-input-placeholder
 }
 
 .mycars-image {
-    background-image: url("../img/mycar/my-smallcar.jpg");
-	  -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
-    padding-top: 140px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-}
-
-.mycars-image2 {
-    background-image: url("../img/mycar/my-bigcar.jpg");
-	  -webkit-background-size: cover;
+	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
@@ -626,7 +674,6 @@ textarea.ui-input-text:-ms-input-placeholder
 }
 
 .feed-profile-image {
-    background: url('../img/acw-logo.png');
     -webkit-background-size:cover !important;
     background-size:cover !important;
     background-position: center;

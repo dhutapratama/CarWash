@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Go Green Eco Carwash</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.min.css">
+
+    <script src="cordova.js"></script>
+    <script src="jqm/jquery.min.js"></script>
+    <script src="jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="xdk/init-dev.js"></script>
+
+    <link rel="stylesheet" href="css/flickity.css" media="screen">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div data-role="page" id="main-page" class="main-page">
+    <div role="main" class="ui-content main-login" style="height: 100% !important;">
+        <div class="main-login-form">
+            <div class="text-center main-form-logo">
+                <img src="img/acw-logo.png" width="130px">
+            </div>
+            <input data-clear-btn="true" name="login-username" data-wrapper-class="ui-login-input" id="login_username_text" value="" type="text" placeholder="Username">
+            <input data-clear-btn="true" name="login-password" data-wrapper-class="ui-login-input" id="login_password_text" value="" type="password" placeholder="Password">
+            <a class="ui-btn login-btn" id="login_login_btn">LOGIN</a>
+            <p class="text-center login-or" id="or_2" style="display:none;">OR</p>
+            <a class="ui-btn signup-btn" href="#registration-page" data-transition="slide" id="login_create_account_btn" style="display:none;">CREATE AN ACCOUNT</a>
+        </div>
+    </div><!-- /content -->
+</div><!-- /page -->
+
+<div data-role="page" id="today_works-page" style="" class="today_works-page">
+    <div data-role="header" class="app-header">
+        <h1 class="app-header-h1"><a href="#" class="app-header-title">Go Green Carwash Detailer</a></h1>
+    </div><!-- /header -->
+    <div role="main">
+        <div class="twp">
+            <div class="home-user_photo" id="user_photo">
+                
+            </div>
+            <div class="home-information">
+                <div class="home-information-name" id="detailer_name"></div>
+                <div class="home-information-role" id="user_type"></div>
+                <div class="home-information-work">
+                    <div class="hiw-today_text">
+                    Today Works
+                    </div>
+                    <div class="hiw-today_value" id="today_works">
+                    : -
+                    </div>
+                </div>
+                <div class="home-information-work">
+                    <div class="hiw-total_text">
+                    Total Works
+                    </div>
+                    <div class="hiw-total_value" id="total_works">
+                    : -
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="worklist">
+            <div class="worklist-title">Today Worklist</div>
+
+            <div id="work_list"></div>
+            
+        </div>
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" class="home-footer-menu">
+            <ul>
+                <li class="home-footer-menu-item_l"><a href="#news_feed-page" class="ui-btn ui-icon-comment ui-btn-icon-notext hfmi-link">News Feed</a></li>
+                <li class="home-footer-menu-item"><a href="#" class="ui-btn ui-icon-info ui-btn-icon-notext hfmi-link">Contact Us</a></li>
+                <li class="home-footer-menu-item"><a href="#map-page" class="ui-btn ui-icon-location ui-btn-icon-notext hfmi-link">Maps</a></li>
+                <li><a href="#" class="ui-btn ui-icon-phone ui-btn-icon-notext hfmi-link">Call Us</a></li>
+            </ul>
+        </div>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="work_detail-page">
+    <div data-role="header" class="app-header">
+        <a href="#today_works-page" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" data-inline="true" class="all-top-menu all-header-backbtn" data-transition="slide" data-direction="reverse">Back</a>
+        <h2 class="app-header-h2"><a href="#" class="app-header-title">Go Green Carwash Detailer</a></h2>
+    </div><!-- /header -->
+
+    <div class="work_detail-header" id="list_car_photo">
+        <div class="work_detail-carnumber" id="list_car_number"></div>
+    </div>
+
+    <div class="work_detail-address">
+        <div id="list_address"></div>
+        <div class="user_picker">
+            <select id="pick_user" data-role="none"></select>
+        </div>
+        
+        <button id="start_work">Start Working</button>
+    </div>
+
+    <div id="work_photos">
+        <div class="work_detail-text">Before</div>
+        <div class="work_detail-images">
+            <div id="images_before"></div>
+            <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext work_detail-add" id="capture_1"></a>
+        </div>
+
+        <div class="work_detail-text">After</div>
+        <div class="work_detail-images">
+            <div id="images_after"></div>
+            <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext work_detail-add" id="capture_2"></a>
+        </div>
+    </div>
+</div><!-- /page -->
+
+<div data-role="page" id="last_works-page">
+</div><!-- /page -->
+
+<script>
+</script>
+
+</body>
+</html>

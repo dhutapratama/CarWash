@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-project-lite/sample.zip",
       "projectGuid": "c53485e1-6d5c-474f-8639-b7b44fe96874",
-      "lastModifiedDate": 1443709727911,
+      "lastModifiedDate": 1446005290697,
       "creationDate": 1443698107854
     },
     "XDK-app-designer": "false",
@@ -157,25 +157,25 @@
         },
         "icons_": [
           {
-            "relPath": "img/icons/android/android 36x36.png",
+            "relPath": "img/assets/android/icons/android-36x36.png",
             "density": "ldpi",
             "height": 36,
             "width": 36
           },
           {
-            "relPath": "img/icons/android/android 48x48.png",
+            "relPath": "img/assets/android/icons/android-48x48.png",
             "density": "mdpi",
             "height": 48,
             "width": 48
           },
           {
-            "relPath": "img/icons/android/android 72x72.png",
+            "relPath": "img/assets/android/icons/android-72x72.png",
             "density": "hdpi",
             "height": 72,
             "width": 72
           },
           {
-            "relPath": "img/icons/android/android 96x96.png",
+            "relPath": "img/assets/android/icons/android-96x96.png",
             "density": "xhdpi",
             "height": 96,
             "width": 96
@@ -183,59 +183,59 @@
         ],
         "splashes_": [
           {
-            "relPath": "img/splashscreen/android/Portrait-320x426.png",
+            "relPath": "img/assets/android/splashscreen/portrait-426x320.png",
             "density": "ldpi",
             "height": 426,
             "width": 320,
             "orientation": "portrait"
           },
           {
-            "relPath": "img/splashscreen/android/Portrait-320x470.png",
+            "relPath": "img/assets/android/splashscreen/portrait-470x320.png",
             "density": "mdpi",
             "height": 470,
             "width": 320,
             "orientation": "portrait"
           },
           {
-            "relPath": "img/splashscreen/android/Portrait-480x640.png",
+            "relPath": "img/assets/android/splashscreen/portrait-640x480.png",
             "density": "hdpi",
             "height": 640,
             "width": 480,
             "orientation": "portrait"
           },
           {
-            "relPath": "img/splashscreen/android/Portrait-720x960.png",
+            "relPath": "img/assets/android/splashscreen/portrait-960x720.png",
             "density": "xhdpi",
             "height": 960,
             "width": 720,
             "orientation": "portrait"
           },
           {
-            "relPath": "img/splashscreen/android/landscape-426x320.png",
+            "relPath": "img/assets/android/splashscreen/landscape-426x320.png",
             "density": "ldpi",
             "height": 320,
             "width": 426,
             "orientation": "landscape"
           },
           {
-            "relPath": "img/splashscreen/android/landscape-960x720.png",
-            "density": "xhdpi",
-            "height": 720,
-            "width": 960,
+            "relPath": "img/assets/android/splashscreen/landscape-470x320.png",
+            "density": "mdpi",
+            "height": 320,
+            "width": 470,
             "orientation": "landscape"
           },
           {
-            "relPath": "img/splashscreen/android/landscape-640x480.png",
+            "relPath": "img/assets/android/splashscreen/landscape-640x480.png",
             "density": "hdpi",
             "height": 480,
             "width": 640,
             "orientation": "landscape"
           },
           {
-            "relPath": "img/splashscreen/android/landscape-470x320.png",
-            "density": "mdpi",
-            "height": 320,
-            "width": 470,
+            "relPath": "img/assets/android/splashscreen/landscape-960x720.png",
+            "density": "xhdpi",
+            "height": 720,
+            "width": 960,
             "orientation": "landscape"
           }
         ],
