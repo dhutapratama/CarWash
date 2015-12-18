@@ -30,23 +30,23 @@ $( document ).on( "mobileinit", function() {
     $.mobile.loader.prototype.options.textVisible = false;
     $.mobile.loader.prototype.options.theme = "a";
     $.mobile.loader.prototype.options.html = "";
-
-    $(document).bind('keydown', function(event) {   
-        if (event.keyCode == 27) { // 27 = 'Escape' keyCode (back button)
-                event.preventDefault();
-            }
-    });
-
     console.log("Studiwidie initialization is ended.");
 });
 
-var api_url         = "http://api.carwash.app";
-//var api_url         = "http://api.gogreencarwash.id";
+$(document).bind('keydown', function(event) {   
+    if (event.keyCode == 27) { // 27 = 'Escape' keyCode (back button)
+            event.preventDefault();
+        }
+});
+
+//var api_url         = "http://api.carwash.app";
+var api_url         = "http://api.gogreencarwash.id";
 var client_id       = "2d48ad81ef13471a99dccbf57981a27c";
 var client_secret   = "4d3e131d2244763fec17955c4fb93d94";
 var access_token    = window.localStorage.access_token;
 
 var is_logged_in    = false;
+var member_car_id   = 0;
 
 function initialization () {
     //$.mobile.loading( "show" );
@@ -137,6 +137,7 @@ function logged_in (data) {
     $( "#news_content" ).html( data.news );
 
     $.mobile.loading( "hide" );
+    $( "#last_cleaning, #next_cleaning" ).listview( "refresh" );
 }
 
 function error_dialog(message) {
@@ -278,6 +279,133 @@ $( document ).on( "vclick", "#register-button", function() {
     });
 });
 
+$( document ).on( "vclick", "#save_car_data", function() {
+    $.mobile.loading( "show" );
+
+    post_url = "/user/update_car";
+    car_number      = $( "#car_car_number" ).val();
+    car_color       = $( "#car_color" ).val();
+    car_type        = $( "#car_type" ).val();
+    car_brand       = $( "#car_brand" ).val();
+    location_name   = $( "#car_location_name" ).val();
+
+    $.ajax({ type: 'POST', url: api_url + post_url + "?access_token=" + access_token, data: 
+        {
+            member_car_id: member_car_id,
+            car_number: car_number, 
+            car_color: car_color,
+            car_type: car_type,
+            car_brand: car_brand,
+            location_name: location_name
+        },
+
+        xhrFields: { withCredentials: true },
+        
+        success: function(data, textStatus ){
+            if(data.error == false) {
+                console.log("Saving car data");
+                $.mobile.changePage( "#home-page", { transition: "slide", changeHash: true });
+            } else {
+                console.log(data.message);
+            }
+            $.mobile.loading( "hide" );
+        },
+        error: function(xhr, textStatus, errorThrown){ network_error(); $.mobile.loading( "hide" ); }
+    });
+});
+
+$( document ).on( "vclick", "#add_car_btn", function() {
+    navigator.camera.getPicture(addCar, onFail, 
+    { quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL });
+});
+
+$( document ).on( "vclick", "#change_profile_image", function() {
+    navigator.camera.getPicture(changeProfile, onFail, 
+    { quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL });
+});
+
+$( document ).on( "vclick", "#change_cover_image", function() {
+    navigator.camera.getPicture(changeCover, onFail, 
+    { quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL });
+});
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
+
+function addCar(imageURI) {
+    post_url = "/user/add_car";
+    $.ajax({ type: 'POST', url: api_url + post_url + "?access_token=" + access_token, data: 
+    {
+        photo_data: imageURI,
+        image_type: 'car'
+    },
+
+    xhrFields: { withCredentials: true },
+    
+    success: function(data, textStatus ){
+        if(data.error == false) {
+            console.log("Add image car");
+            member_car_id = data.member_car_id;
+            $( "#car_photo_image" ).attr("src", data.member_car_photo_url);
+            $.mobile.changePage( "#add_car-page", { transition: "slidetop", changeHash: true });
+        } else {
+            console.log(data.message);
+        }
+        $.mobile.loading( "hide" );
+    },
+    error: function(xhr, textStatus, errorThrown){ network_error(); $.mobile.loading( "hide" );  }
+    });
+}
+
+function changeProfile(imageURI) {
+    post_url = "/user/change_profile_image";
+    $.ajax({ type: 'POST', url: api_url + post_url + "?access_token=" + access_token, data: 
+    {
+        photo_data: imageURI,
+        image_type: 'profile_picture'
+    },
+
+    xhrFields: { withCredentials: true },
+    
+    success: function(data, textStatus ){
+        if(data.error == false) {
+            console.log("Edited user image");
+            $( "#home_profile_picture" ).css( "background-image", "url("+data.picture_url+")" );
+        } else {
+            console.log(data.message);
+        }
+        $.mobile.loading( "hide" );
+    },
+    error: function(xhr, textStatus, errorThrown){ network_error(); $.mobile.loading( "hide" );  }
+    });
+}
+
+function changeCover(imageURI) {
+    post_url = "/user/change_cover";
+    $.ajax({ type: 'POST', url: api_url + post_url + "?access_token=" + access_token, data: 
+    {
+        photo_data: imageURI,
+        image_type: 'cover'
+    },
+
+    xhrFields: { withCredentials: true },
+    
+    success: function(data, textStatus ){
+        if(data.error == false) {
+            console.log("Edited cover url");
+            $( "#home_header" ).css( "background-image", "url("+data.cover_url+")" );
+        } else {
+            console.log(data.message);
+        }
+        $.mobile.loading( "hide" );
+    },
+    error: function(xhr, textStatus, errorThrown){ network_error(); $.mobile.loading( "hide" );  }
+    });
+}
 
 // Page
 $( document ).on( "pagecreate", "#map-page", function() {

@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-project-lite/sample.zip",
       "projectGuid": "c53485e1-6d5c-474f-8639-b7b44fe96874",
-      "lastModifiedDate": 1446005290697,
+      "lastModifiedDate": 1448613328419,
       "creationDate": 1443698107854
     },
     "XDK-app-designer": "false",
@@ -17,24 +17,6 @@
     "serviceMethods": [],
     "cordovaPluginsDirectory": "plugins",
     "cordovaPlugins": [
-      {
-        "id": "cordova-plugin-statusbar",
-        "name": "StatusBar",
-        "version": "1.0.0",
-        "originType": "cordova.io",
-        "origin": "cordova-plugin-statusbar",
-        "gitref": "",
-        "paramvals": {},
-        "selectedState": "Included",
-        "dependsOn": [],
-        "topLevel": true,
-        "cordovaVersion": ">=3.0.0",
-        "permissions": {},
-        "description": "Cordova StatusBar Plugin",
-        "data": {},
-        "dependedBy": [],
-        "checksum": "b4e7aac6"
-      },
       {
         "id": "cordova-plugin-device",
         "version": "1.0.1",
@@ -68,6 +50,50 @@
         "name": "Splashscreen",
         "description": "Cordova Splashscreen Plugin",
         "checksum": "170efb68"
+      },
+      {
+        "id": "cordova-plugin-camera",
+        "name": "Camera",
+        "version": "1.2.0",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-camera",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-camera",
+        "selectedState": "Included",
+        "checksum": "d90b11fa",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {
+          "android:name": [
+            "android.permission.WRITE_EXTERNAL_STORAGE"
+          ]
+        },
+        "description": "Cordova Camera Plugin",
+        "data": {},
+        "dependedBy": []
+      },
+      {
+        "id": "cordova-plugin-file",
+        "name": "File",
+        "version": "2.1.0",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-file",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-file",
+        "selectedState": "Included",
+        "checksum": "a32414d6",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {
+          "android:name": [
+            "android.permission.WRITE_EXTERNAL_STORAGE"
+          ]
+        },
+        "description": "Cordova File Plugin",
+        "data": {},
+        "dependedBy": []
       }
     ],
     "buildConfigurations": {

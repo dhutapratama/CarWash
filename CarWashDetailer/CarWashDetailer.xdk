@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-project-lite/sample.zip",
       "projectGuid": "30da67a1-9e3c-4699-9916-455a71d71ff4",
-      "lastModifiedDate": 1446028706299,
+      "lastModifiedDate": 1448954269244,
       "creationDate": 1445851412255
     },
     "XDK-app-designer": "false",
@@ -256,7 +256,7 @@
         "excludedLibraries_": "",
         "cordovaCLIVersion_": "5.1.1",
         "crosswalkVersion_": "14",
-        "appVersion_": "0.0.1",
+        "appVersion_": "1.0.1",
         "appDescription_": "Aplikasi monitoring cuci mobil dengan metode American Eco Carwash.",
         "appAuthor_": "Dhuta Pratama",
         "appVersionCode_": "1"

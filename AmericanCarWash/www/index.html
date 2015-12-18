@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Go Green Eco Carwash</title>
+    <title>Go Green Carwash</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <style>
@@ -82,6 +82,22 @@
     </div><!-- /content -->
 </div><!-- /page -->
 
+<div data-role="page" id="add_car-page">
+    <div role="main" class="ui-content main-login">
+        <div class="main-login-form ">
+            <div class="text-center main-form-logo">
+                <img src="img/acw-logo.png" width="150px" id="car_photo_image">
+            </div>
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="car_car_number" value="" type="text" placeholder="Car Number*">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="car_color" value="" type="text" placeholder="Car Color*">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="car_type" value="" type="text" placeholder="Car Type*">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="car_brand" value="" type="text" placeholder="Brand*">
+            <input data-wrapper-class="ui-login-input" data-clear-btn="true" id="car_location_name" value="" type="text" placeholder="Location Name*">
+            <a class="ui-btn login-btn" href="#" id="save_car_data">Save</a>
+        </div>
+    </div><!-- /content -->
+</div><!-- /page -->
+
 <div data-role="page" id="news_feed-page">
 
     <div data-role="header" class="app-header">
@@ -122,21 +138,23 @@
         <a href="#all-menu" data-role="button" data-icon="bullets" data-iconpos="notext" data-theme="a" data-inline="true" class="ui-btn-right all-top-menu">Menu</a>
     </div><!-- /header -->
 
-    <div class="home-header" id="home_header">
-        <a class="home-profile" href="#">
-            <div class="home-profile-picture" id="home_profile_picture" style="background-image:url(img/profile_picture_default.jpg)">
-            </div>
-            <div class="home-profile-name">
-                <div class="home-profile-name-user" id="home_full_name"></div>
-                <div class="home-profile-name-address" id="home_address"></div>
-                <div class="home-profile-name-carnumber" id="home_car_number"></div>
-            </div>
-        </a>
-    </div>
+    <a class="home-profile" href="#" id="change_cover_image">
+        <div class="home-header" id="home_header">
+            <a class="home-profile" href="#" id="change_profile_image">
+                <div class="home-profile-picture" id="home_profile_picture" style="background-image:url(img/profile_picture_default.jpg)">
+                </div>
+                <div class="home-profile-name">
+                    <div class="home-profile-name-user" id="home_full_name"></div>
+                    <div class="home-profile-name-address" id="home_address"></div>
+                    <div class="home-profile-name-carnumber" id="home_car_number"></div>
+                </div>
+            </a>
+        </div>
+    </a>
 
     <div class="ui-grid-a home-secondary-menu text-center">
         <div class="ui-block-a"><a class="ui-bar home-secondary-menu-item_1" href="#mycar-page" data-transition="slide">My Car</a></div>
-        <div class="ui-block-b"><a class="ui-bar home-secondary-menu-item" href="#deposit-page" data-transition="slide">Deposit</a></div>
+        <div class="ui-block-b"><a class="ui-bar home-secondary-menu-item" href="#deposit-page" data-transition="slide">Membership Price</a></div>
     </div><!-- /grid-a -->
 
     <div role="main" class="ui-content">
@@ -170,6 +188,10 @@
             <ul data-role="listview" data-inset="true" id="mycar_list">
 
             </ul>
+            <div align="center">
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext work_detail-add" id="add_car_btn"></a>
+                
+            </div>
         </div>
     </div><!-- /content -->
 </div><!-- /page -->
@@ -308,9 +330,11 @@
     </div>
 
     <ul data-role="listview">
-        <li data-icon="false"><a href="#" data-transition="slide" class="panel-menu-item">MY CARS</a></li>
         <li data-icon="false"><a href="#main-page" data-transition="slide" class="panel-menu-item">MORE INFORMATION</a></li>
+        <!--
+        <li data-icon="false"><a href="#" data-transition="slide" class="panel-menu-item">MY CARS</a></li>
         <li data-icon="gear"><a href="#" data-transition="slide" class="panel-menu-item">SETTINGS</a></li>
+        -->
         <li data-icon="power"><a href="#main-page" data-transition="slide" class="panel-menu-item" id="panel_logout_menu">LOGOUT</a></li>
     </ul>
 </div><!-- /panelmenu -->
